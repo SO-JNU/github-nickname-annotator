@@ -4,8 +4,8 @@
     "version": "0.1",
     "description": "Annotate a nickname in GitHub.",
     "icons": {
-        "48": "icons/annotator-48.png",
-        "96": "icons/annotator-96.png"
+//        "48": "icons/annotator-48.png",
+//        "96": "icons/annotator-96.png"
     },
     "content_scripts": [
         {
@@ -13,6 +13,12 @@
             "js": ["annotator.js"]
         }
     ],
+    "permissions": [
+        "storage"
+    ],
+    "browser_action": {
+        "default_popup": "popup/popup.html"
+    },
     "browser_specific_settings": {
         "gecko": {
             "id": "github-annotator@so-jnu.com"

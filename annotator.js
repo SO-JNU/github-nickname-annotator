@@ -1,4 +1,11 @@
-let nick = "nick";
+let uid = document.getElementsByName("twitter:image:src")[0].content.split("/")[4].split("?")[0];
+console.log("uid =", uid);
+
+let source = localStorage.key("github-nickname-source");
+
+let db = JSON.parse(source);
+
+let nick = db[uid];
 
 let vcard = document.getElementsByClassName("vcard-details")[0];
 
