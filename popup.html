@@ -6,17 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GitHub Nickname Annotator :: Index</title>
-    <script type="application/javascript">
-        function onload() {
-            document.getElementById("content").innerText = localStorage.getItem("github-nickname-source");
-        }
-        function onsave() {
-            localStorage.setItem("github-nickname-source", document.getElementById("content").innerText);
-        }
-    </script>
 </head>
-<body onload="onload()">
+<body id="body">
 <label for="content"></label><textarea name="content" id="content" cols="30" rows="10"></textarea>
-<button onclick="onsave()">Save</button>
+<button id="save-button">Save</button>
+<script type="application/javascript" src="popup.js" integrity="sha256-JwEIqafbJfdgiFabVpuT+b4bpW5UBc7nQfc8Jt4VyKI="></script>
 </body>
 </html>
